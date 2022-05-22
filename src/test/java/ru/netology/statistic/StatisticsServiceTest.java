@@ -17,4 +17,15 @@ public class StatisticsServiceTest {
 
         assertEquals(expected, actual);
     }
+    @Test
+    void findMaxFibonacci() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89};
+        long expected = 89;
+
+        long actual = service.findMax(incomesInBillions);
+
+        assertEquals(expected, actual);
+    }
 }
